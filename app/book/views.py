@@ -171,4 +171,38 @@ def summarize_book():
     except Exception as e:
             error_message = str(e)
             return jsonify({"error": error_message}), 400
+        
+        
+@book_blueprint.route('/summary',methods=["GET"])
+def get_book_summary():
+    try:
+        title = request.args.get('title')
+        
+        if title:
+            book = book_service.get_book_by_title(title)
+            
+            if book is None:
+                raise Exception(f'Book {title} does not exist')
+            
+            return jsonify({
+                'title': book.title,
+                'summary': book.summary,
+            }), 200
+        else:
+            book_list = []
+
+            books = book_service.get_all_books()
+            if books:
+                for book in books:
+                    book_list.append({
+                        'title': book.title,
+                        'summary': book.summary
+                    })
+                
+            return jsonify({
+                'books': book_list
+            }), 200
+    except Exception as e:
+            error_message = str(e)
+            return jsonify({"error": error_message}), 400
     
