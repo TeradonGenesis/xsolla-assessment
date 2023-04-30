@@ -7,6 +7,9 @@
 
 ### Repo
 
+### Usage
+
+To call the eendpoints, you can use postman export included in the repository
 
 ### Installation
 1. Navigate to the root directory and run  ```pip install requirements.txt```
