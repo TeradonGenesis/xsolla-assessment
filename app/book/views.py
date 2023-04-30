@@ -2,15 +2,15 @@ from flask import request, jsonify
 from . import book_blueprint
 from .repositories import BookRepository
 from .services import BookService
-import PyPDF2
 import os
 from app import database
 from werkzeug.utils import secure_filename
 from app.middlewares.middleware import check_book_post_json_request, check_upload_book_request
+from dotenv import load_dotenv
 
-
+load_dotenv()
 book_repository = BookRepository(database.session)
-book_service = BookService(book_repository, '')
+book_service = BookService(book_repository, os.environ.get('OPENAI_API_KEY'))
 
 @book_blueprint.route('/',methods=["GET"])
 def get_books():
@@ -55,9 +55,14 @@ def get_books():
 @check_book_post_json_request
 def create_book():
     try:
+        if 'content' not in request.json:
+            raise Exception('Content parameter is missing')
+        
         title = request.json['title']
         content = request.json['content']
         
+        if not content:
+            raise Exception('Content for the book is empty')
         #check if the book record is created already
         book = book_service.get_book_by_title(title)
         if book:
