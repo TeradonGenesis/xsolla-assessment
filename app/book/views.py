@@ -10,7 +10,7 @@ from app.middlewares.middleware import check_book_post_json_request, check_uploa
 
 
 book_repository = BookRepository(database.session)
-book_service = BookService(book_repository, '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')
+book_service = BookService(book_repository, '')
 
 @book_blueprint.route('/',methods=["GET"])
 def get_books():
