@@ -11,6 +11,12 @@
 ### Installation
 1. Navigate to the root directory and run  ```pip install requirements.txt```
 
+2. Create .env file to set the OPENAI_API_KEY environment variabke in the root folder and modify it as such to use your own api key
+
+```cmd
+OPENAI_API_KEY=<PUT YOUR API KEY HERE>
+```
+
 2. In the root directory, run ```python app.py```
 
 3. The server should then be up
@@ -38,6 +44,7 @@ Response
 }
 ```
 
+
 #### Upload pdf book to create a book record
 
 **POST** /api/books/upload
@@ -59,6 +66,7 @@ Response
     "title": "alice-in-wonderland"
 }
 ```
+
 
 #### Get all book records
 
@@ -88,6 +96,7 @@ Response
 }
 ```
 
+
 #### Get specific book record
 
 **GET** /api/books?title=the-little-mermaid
@@ -102,6 +111,7 @@ Response
     "type": "json"
 }
 ```
+
 
 #### Generate summary for a specific book record based on the content or pdf file content
 
@@ -139,6 +149,7 @@ Response
 }
 ```
 
+
 #### Get all book summaries
 
 **GET** /api/books/summary
@@ -158,6 +169,7 @@ Response
     ]
 }
 ```
+
 
 #### Get specific book summary
 
