@@ -29,14 +29,14 @@ class BookService:
     def update_summary(self, book: Book, summary: str) -> str:
         return self.book_repository.update_summary(book, summary)
     
-    def generate_summary_from_pdf(self, file_path: str):
+    def generate_summary_from_pdf(self, file_path: str) -> str:
         loader = PyPDFLoader(file_path)
         docs = loader.load_and_split()
         chain = load_summarize_chain(self.llm, chain_type="map_reduce")
         summary = chain.run(docs)
         return summary
     
-    def generate_summary_from_content(self, book_content: str):
+    def generate_summary_from_content(self, book_content: str) ->str:
         try:
             prompt = f"Please summarize the following book content: {book_content}"
             
