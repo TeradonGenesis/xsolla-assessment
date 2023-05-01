@@ -6,6 +6,8 @@ https://docs.google.com/document/d/1fEBbYPMTkM7mtw22CLjE0cZBTGoDo3bA0sqQp3bW5Y8/
 
 ### Live Version
 
+http://exilzety.pythonanywhere.com/
+
 ### Usage
 
 To call the endpoints, you can use postman export included in the repository
