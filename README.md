@@ -12,7 +12,13 @@ http://exilzety.pythonanywhere.com/
 
 To call the endpoints, you can use postman export included in the repository
 
-#### xsolla.postman_collection.json 
+#### Dev
+
+##### xsolla.postman_collection.json 
+
+#### Production
+
+##### xsolla-prod.postman_collection.json 
 
 ### Installation
 1. Navigate to the root directory and run  ```pip install -r requirements.txt```
