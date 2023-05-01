@@ -13,7 +13,7 @@ To call the endpoints, you can use postman export included in the repository
 #### xsolla.postman_collection.json 
 
 ### Installation
-1. Navigate to the root directory and run  ```pip install requirements.txt```
+1. Navigate to the root directory and run  ```pip install -r requirements.txt```
 
 2. Create .env file to set the OPENAI_API_KEY environment variabke in the root folder and modify it as such to use your own api key
 
