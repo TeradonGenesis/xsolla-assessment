@@ -10,7 +10,9 @@ http://exilzety.pythonanywhere.com/
 
 ### Usage
 
-To call the endpoints, you can use postman export included in the repository
+To call the endpoints, you can use postman export included in the repository. 
+
+The SQLITE DB is preloaded with the-little-mermaid and alice-in-wonderland data. Just need to call the summarize endpoint to summarize the book
 
 #### Dev
 
