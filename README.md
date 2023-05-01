@@ -1,7 +1,8 @@
 # Xsolla Assessment Book ChatGPT3 / Langchain Summarizer Python Flask Server
 
-### Explanation of the folder structure and design
+### Explanation of the assessment
 
+https://docs.google.com/document/d/1fEBbYPMTkM7mtw22CLjE0cZBTGoDo3bA0sqQp3bW5Y8/edit?usp=sharing
 
 ### Live Version
 
