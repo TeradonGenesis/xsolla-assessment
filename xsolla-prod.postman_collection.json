@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "cd83bb30-be33-4dff-abf3-aea67694664b",
+		"name": "xsolla-prod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get book by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books?title=the-little-mermaid",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "the-little-mermaid"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all books' summaries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books/summary",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get book summary by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books/summary?title=the-little-mermaid",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "the-little-mermaid"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload book record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Desktop/Coding/alice-in-wonderland.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books/upload",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create book record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"the-little-mermaid\",\r\n    \"content\": \"The Little Mermaid becomes melancholy and asks her grandmother if humans can live forever. Her grandmother explains that humans have a much shorter lifespan than mermaids (300 years), but that they have an eternal soul that lives on in heaven, while mermaids turn to sea foam at death and cease to exist.The Little Mermaid, longing for the prince and an eternal soul, visits the Sea Witch who lives in a dangerous part of the ocean. The witch willingly helps her by selling her a potion that gives her legs in exchange for her voice (her tongue), as the Little Mermaid has the most enchanting voice in the entire world. The witch warns the Little Mermaid that once she becomes a human, she will never be able to return to the sea. Consuming the potion will make her feel as if a sword is being passed through her body. When she recovers, she will have two human legs and will be able to dance like no human has ever danced before; however, she will constantly feel as if she is walking on sharp knives. Moreover, she will obtain a soul only if she wins the love of the prince and marries him, for then a part of his soul will flow into her. Otherwise, at dawn on the first day after he marries someone else, the Little Mermaid will die with a broken heart and dissolve into sea foam upon the waves.After she agrees to the arrangement, the Little Mermaid swims up to the surface near the prince's castle and drinks the potion. The liquid feels like a sword piercing her body and she passes out on the shore, naked. She is found by the prince, who is mesmerized by her beauty and grace, even though he discovers that she is mute. Most of all, he likes to see her dance, and she dances for him despite suffering excruciating pain with every step. Soon, the Little Mermaid becomes the prince's favorite companion and accompanies him on many of his outings—but he does not fall in love with her at all. \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summarize book for json",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"the-little-mermaid\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books/summary",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Summarize book pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"alice-in-wonderland\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://exilzety.pythonanywhere.com/api/books/summary",
+					"protocol": "https",
+					"host": [
+						"exilzety",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						"api",
+						"books",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
